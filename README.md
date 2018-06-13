@@ -1,8 +1,5 @@
 # Siddhi's Savvy Coder's Portfolio
 
 
-My name is Siddhi Goswami.
+Hello! My name is Siddhi Goswami! I go to Marquette High School!
 
-My favorite color is blue.
-
-I like pineapple on pizza.
