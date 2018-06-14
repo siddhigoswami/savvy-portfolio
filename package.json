@@ -1,0 +1,23 @@
+{
+  "name": "SiddhiGoswami",
+  "version": "1.0.0",
+  "description": "Hello! My name is Siddhi Goswami! I go to Marquette High School!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhigoswami/savvy-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddhigoswami/savvy-portfolio/issues"
+  },
+  "homepage": "https://github.com/siddhigoswami/savvy-portfolio#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
