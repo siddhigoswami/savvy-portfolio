@@ -1,18 +1,56 @@
+
+h3{
+  font-size: 20px;
+  
+}
+
+body {
+  margin: 0; 
+}
+
+#navigation{
+  background-color: lightskyblue;
+}
+
+#navigation > ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+#navigation > ul > li{
+  margin: 0 10px 0 0;
+  display: inline;
+}
+
+#header{
+ padding: 10px;
+  background-color: lavenderblush;
+}
+
+#content{
+ padding: 10px;
+  background-color: lightgoldenrodyellow;
+}
+
+#footer{
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+
 .imblueify {
     color:cornflowerblue;
   }
-  p {
-    background-color:lightcoral;
-    color:ivory;
-  }
+ 
+ 
+
+
 
   #codeperson{
     color: coral;
   }
-  h3{
-    font-size: 20px;
-    
-  }
+  
 
   #boldlinky{
     font-weight:bold;
