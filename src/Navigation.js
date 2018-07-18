@@ -1,18 +1,29 @@
-export default `
-<div id="navigation">
-   <ul class="container">
+import { lowercase } from 'lodash';
+
+function buildLinks(links){
+  var result = '';
+  var i = 0;
+
+  while(i < links.length){
+      result += `
       <li>
-        <a href="/blog">Blog</a>
+        <a href="/${links[i]}">${links[i]}</a>
       </li>
-      <li>
-        <a href="/Projects">Projects</a> 
-     <ul class="dropdown">
-         <li>first</li>
-         <li>second</li>
-         <li>third</li>
-       </ul>
-      </li>
-      
+      `;
+
+      i++;
+  }
+
+  return result;
+}
+
+
+export default function Navigation(state){
+  return `
+    <div id="navigation">
+      <ul class="container">
+        ${buildLinks(state.links)}
       </ul>
-  </div>
-`;
+    </div>
+  `;
+}
