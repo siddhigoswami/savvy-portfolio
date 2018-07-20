@@ -3,44 +3,54 @@ import Navigation from './src/Navigation';
 import Content from './src/Content';
 import Footer from './src/Footer';
 import * as State from './store';
-import Navigo from 'navigo';
+import Navigo from 'Navigo';
+import { capitalize } from 'lodash';
 
 
 var root = document.querySelector('#root');
-var router = new Navigo();
-
-console.log(router);
+var router = new Navigo(location.origin);
 
 function render(state){
     var greeting;
     var input;
-    var links;
-    var i = 0;
+    
+
+    console.log(router);
 
      root.innerHTML = `
         ${Navigation(state)}
         ${Header(state)}
-        ${Content}
+        ${Content(state)}
         ${Footer} 
         `;
-    
-    
-    links = document.querySelectorAll('#navigation a');
-    
-    while(i < links.length){
-        links[i].addEventListener(
-            'click',
-            (event) => {
-                var page = event.target.textContent;
-    
-                    event.preventDefault();
-    
-                    render(State[page]);
-                }
-            );
-            i++;
-        }
-}
 
+        greeting = document.querySelector('#greeting');
+        input = document.querySelector('#header input');
 
-render(State['Home']);
+        input.addEventListener(
+            'keyup',
+            (event) => greeting.innerHTML = `
+                <div>
+                    <h3>Welcome to my Home Page,</h3>
+                    <h4>${event.target.value}</h4>
+                </div>
+            `
+        );
+
+        router.updatePageLinks();
+    }
+
+    function handleRoute(params){
+        var page = capitalize(params.page);
+        
+        console.log(params);
+        console.log(page);
+        
+        render(State[page]);
+    }
+
+        router
+            .on('/:page', handleRoute)
+            .on('/' , () => handleRoute({ 'page' : 'home'}))
+            .resolve();
+        

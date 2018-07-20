@@ -1,4 +1,5 @@
-export default{
+export default {
+    'body': 'Contact',
     'links': [ 'Home', 'Blog', 'Projects' ],
     'title': 'Contact Me'
 };

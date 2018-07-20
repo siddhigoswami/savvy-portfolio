@@ -8,7 +8,6 @@ h3{
 }
 
 body { 
-  display: grid;
   grid-template-rows: min-content min-content auto min-content;
   grid-template-areas:
     "navigation"
