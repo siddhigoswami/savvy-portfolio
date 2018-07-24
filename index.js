@@ -5,10 +5,14 @@ import Footer from './src/Footer';
 import * as State from './store';
 import Navigo from 'Navigo';
 import { capitalize } from 'lodash';
+import axios from 'axios';
+
 
 
 var root = document.querySelector('#root');
 var router = new Navigo(location.origin);
+
+axios('https://jsonplaceholder.typicode.com/posts').then(console.log);
 
 function render(state){
     var greeting;
