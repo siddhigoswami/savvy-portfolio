@@ -1,5 +1,5 @@
 export default {
     'body': 'Home',
     'links': [ 'Blog', 'Contact', 'Projects' ],
-    'title': 'Siddhi Goswami\'s Project'
+    'title': 'Siddhi Goswami\'s Savvy Coders Portfolio'
 };

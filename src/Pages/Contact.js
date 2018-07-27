@@ -1,4 +1,5 @@
-export default `
+export default function Contacts() {
+  return `
 <form action="//formspree.io/gosiddhi03@gmail.com" method="POST">
 <input type="text" name="firstname" required="First Name" size="100" autofocus>
 <input type="text" name="lastname" required="Last Name" size="100">
@@ -33,3 +34,4 @@ export default `
 <input type="submit">
 </form>
 `;
+}

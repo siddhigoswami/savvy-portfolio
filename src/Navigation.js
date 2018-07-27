@@ -22,7 +22,7 @@ function reduceLinkToHTML(links, link){
 
 }
  
-function buildlinks(links){
+function buildLinks(links){
     return links.reduce(reduceLinkToHTML, '');
 }
 
